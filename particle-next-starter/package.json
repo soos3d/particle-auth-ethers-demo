@@ -12,7 +12,7 @@
     "@next/swc-darwin-arm64": "^14.2.5",
     "@particle-network/auth-core": "^1.5.1",
     "@particle-network/auth-core-modal": "^1.5.1",
-    "@particle-network/authkit": "^2.0.0",
+    "@particle-network/authkit": "^2.1.1",
     "@particle-network/chains": "^1.5.7",
     "@particle-network/wallet": "^2.0.0",
     "ethers": "^6.13.1",
