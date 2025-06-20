@@ -42,6 +42,11 @@ export const ParticleAuthkit = ({ children }: React.PropsWithChildren) => {
             supportLanguageSwitch: false,
           },
         },
+        // optional, ERC4337
+        erc4337: {
+          name: "BICONOMY",
+          version: "2.0.0",
+        },
       }}
     >
       {children}

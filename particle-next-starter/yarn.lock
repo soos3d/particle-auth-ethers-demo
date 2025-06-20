@@ -914,11 +914,6 @@
   resolved "https://registry.yarnpkg.com/@next/swc-darwin-arm64/-/swc-darwin-arm64-14.2.4.tgz#da9f04c34a3d5f0b8401ed745768420e4a604036"
   integrity sha512-AH3mO4JlFUqsYcwFUHb1wAKlebHU/Hv2u2kb1pAuRanDZ7pD/A/KPD98RHZmwsJpdHQwfEc/06mgpSzwrJYnNg==
 
-"@next/swc-darwin-arm64@^14.2.5":
-  version "14.2.5"
-  resolved "https://registry.yarnpkg.com/@next/swc-darwin-arm64/-/swc-darwin-arm64-14.2.5.tgz#d0a160cf78c18731c51cc0bff131c706b3e9bb05"
-  integrity sha512-/9zVxJ+K9lrzSGli1///ujyRfon/ZneeZ+v4ptpiPoOU+GKZnm8Wj8ELWU1Pm7GHltYRBklmXMTUqM/DqQ99FQ==
-
 "@next/swc-darwin-x64@14.2.4":
   version "14.2.4"
   resolved "https://registry.yarnpkg.com/@next/swc-darwin-x64/-/swc-darwin-x64-14.2.4.tgz#46dedb29ec5503bf171a72a3ecb8aac6e738e9d6"
@@ -1017,6 +1012,13 @@
   dependencies:
     "@nodelib/fs.scandir" "2.1.5"
     fastq "^1.6.0"
+
+"@particle-network/aa@^2.0.2":
+  version "2.0.2"
+  resolved "https://registry.yarnpkg.com/@particle-network/aa/-/aa-2.0.2.tgz#895937e7267795e47107e6c3a7b5abe4727b18b8"
+  integrity sha512-8E7Y3NCU4m2eTtlyJSpLvIxgbbr8NHqhGrit2Sb0210UCjkXnWeCaxgV54cg/6nbjEclvEgUao32ycNnZu8Bzg==
+  dependencies:
+    axios "^1.3.6"
 
 "@particle-network/analytics@^1.0.1":
   version "1.0.1"
@@ -2294,6 +2296,15 @@ axios@^0.27.2:
   dependencies:
     follow-redirects "^1.14.9"
     form-data "^4.0.0"
+
+axios@^1.3.6:
+  version "1.10.0"
+  resolved "https://registry.yarnpkg.com/axios/-/axios-1.10.0.tgz#af320aee8632eaf2a400b6a1979fa75856f38d54"
+  integrity sha512-/1xYAC4MP/HEG+3duIhFr4ZQXR4sQXOIe+o6sdqzeykGLx6Upp/1p8MHqhINOvGeP7xyNHe7tsiJByc4SSVUxw==
+  dependencies:
+    follow-redirects "^1.15.6"
+    form-data "^4.0.0"
+    proxy-from-env "^1.1.0"
 
 axios@^1.5.0:
   version "1.7.4"

@@ -10,6 +10,9 @@ import {
 } from "@particle-network/authkit";
 import { ethers, type Eip1193Provider } from "ethers"; // Eip1193Provider is the interface for the injected BrowserProvider
 
+import { BaseSepolia } from "@particle-network/chains";
+import { SmartAccount } from "@particle-network/aa";
+
 // UI component to display links to the Particle sites
 import LinksGrid from "./components/Links";
 import Header from "./components/Header";
@@ -44,11 +47,30 @@ const Home: NextPage = () => {
     }
   }, [userInfo, chainInfo]);
 
+  const smartAccount = new SmartAccount(provider, {
+    projectId: "Particle Network project ID",
+    clientKey: "Particle Network client key",
+    appId: "Particle Network app ID",
+    aaOptions: {
+      accountContracts: {
+        // 'BICONOMY', 'CYBERCONNECT', 'SIMPLE', 'LIGHT', 'XTERIO'
+        BICONOMY: [
+          {
+            version: "2.0.0",
+            chainIds: [BaseSepolia.id],
+          },
+        ],
+      },
+    },
+  });
+
   // Fetch the user's balance in Ether
   const fetchBalance = async () => {
     try {
       const signer = await ethersProvider.getSigner();
       const address = await signer.getAddress();
+      const smartAccountAddress = await smartAccount.getAddress();
+      console.log("Smart Account Address:", smartAccountAddress);
       const balanceResponse = await ethersProvider.getBalance(address);
       const balanceInEther = ethers.formatEther(balanceResponse); // ethers V5 will need the utils module for those convertion operations
 
